@@ -2,7 +2,7 @@
 /*
 Plugin Name: Advanced Custom Fields: Twitter/Instagram Posts Picker
 Plugin URI: http://digitalcreative.asia/
-Description: Search and select videos on YouTube without leaving the page
+Description: Search and select Posts on Twitter/Instagram
 Version: 1.0.0
 Author: DigitalCreative
 Author URI: http://digitalcreative.asia/
@@ -14,4 +14,4 @@ if( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-include_once('TwitterPostsPicker.php');
+require_once 'classes/TwitterPostsPicker.php';
