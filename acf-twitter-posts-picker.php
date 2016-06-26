@@ -10,7 +10,6 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
-
 //Plugin reference: https://github.com/elliotcondon/acf-field-type-template
 
 if( ! defined( 'ABSPATH' ) ) {
