@@ -15,11 +15,13 @@ class TwitterAPI
 
   public function __construct($consumer_key, $consumer_secret, $access_token, $access_secret)
   {
+    //sets all oauth keys for authorization
     $this->consumer_key = $consumer_key;
     $this->consumer_secret = $consumer_secret;
     $this->access_token = $access_token;
     $this->access_secret = $access_secret;
 
+    //calls the Twitter Auth library class
     $this->twitter = new TwitterOAuth(
       $this->consumer_key,
       $this->consumer_secret,
@@ -29,7 +31,7 @@ class TwitterAPI
 
   }
 
-  //return the tweets based on the keyword
+  //return the tweets based on the param pass
   public function getTweets($parameters )
   {
     if(!empty($parameters)) {
