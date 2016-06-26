@@ -1,7 +1,6 @@
 .tweets-users{
   padding: 20px 10px;
 }
-
 .tweets-users .profile{
   width: 320px;
   float: left;
@@ -11,11 +10,10 @@
   min-height: 240px;
   cursor: pointer;
   position: relative;
-    -webkit-box-shadow: inset 0 0 15px rgba(0,0,0,.1),inset 0 0 0 1px rgba(0,0,0,.05);
-    box-shadow: inset 0 0 15px rgba(0,0,0,.1),inset 0 0 0 1px rgba(0,0,0,.05);
-    background: #eee;
+  -webkit-box-shadow: inset 0 0 15px rgba(0,0,0,.1),inset 0 0 0 1px rgba(0,0,0,.05);
+  box-shadow: inset 0 0 15px rgba(0,0,0,.1),inset 0 0 0 1px rgba(0,0,0,.05);
+  background: #eee;
 }
-
 .tweets-users .profile.current{
   border: 1px solid #5b9dd9;
 }
@@ -24,39 +22,38 @@
   line-height: 24px;
   margin: 0em 0;
 }
-#TB_ajaxContent p{
-  padding: 0px;
-}
-.media-content{
-  position: absolute;
-      top: 30px;
-      left: 0px;
-      right: 0;
-      bottom: 60px;
-      height: auto;
-      width: auto;
-      margin: 0 0 0 12px;
-      overflow: auto;
-      background: #fff;
-      /* border-top: 1px solid #ddd; */
-      border-bottom: 1px solid #ddd;
-}
-.modal-footerbar{
-  position: absolute;
-    right: 20px;
-    bottom: 0;
-    height: 60px;
-    z-index: 100;
-}
-.search-tweets{
-  width: 80%;
-  padding: 0px 10px;
-}
 .selected-tweets .tweets-users{
   padding: 20px 0;
 }
 .selected-tweets .tweets-users .profile{
   margin: 0;
+}
+#TB_ajaxContent p{
+  padding: 0px;
+}
+.media-content{
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  right: 0;
+  bottom: 60px;
+  height: auto;
+  width: auto;
+  margin: 0 0 0 12px;
+  overflow: auto;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+.modal-footerbar{
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  height: 60px;
+  z-index: 100;
+}
+.search-tweets{
+  width: 80%;
+  padding: 0px 10px;
 }
 .loading img{
   width: 218px;
