@@ -53,14 +53,9 @@ twitterObject = {
         jQuery.ajax({
           url : gettweet.ajax_url,
           type : 'post',
-          data : {
-      			action : 'getTweets',
-      			keyword : value,
-            fieldName : fieldName,
-            consumerKey : consumerKey,
-            consumerSecret : consumerSecret,
-            accessToken : accessToken,
-            accessSecret : accessSecret
+          data : { action : 'getTweets', keyword : value, fieldName : fieldName,
+          consumerKey : consumerKey, consumerSecret : consumerSecret,
+          accessToken : accessToken, accessSecret : accessSecret
       		},
           success : function( response ) {
             loading.hide();
@@ -78,13 +73,17 @@ twitterObject = {
       jQuery('.tweets-users.modal').empty();
     });
   }
-
 }
 
 
 jQuery(document).ready(function($) {
-    twitterObject.addRemoveTweet($('.tweets-users.modal .profile'));
-    twitterObject.removeSelected($('.selected-tweets .tweets-users .profile'));
-    twitterObject.getTweets($('.media-content .search'));
-    twitterObject.modalDone($('input.modal-done'));
+  //add or remove tweet upon click on the tweet.
+  twitterObject.addRemoveTweet($('.tweets-users.modal .profile'));
+  //remove the added tweet under 'Select' button when it is clicked
+  twitterObject.removeSelected($('.selected-tweets .tweets-users .profile'));
+  //trigger when click on search button in the modal box
+  //and get tweets from Twitter API through Ajax call
+  twitterObject.getTweets($('.media-content .search'));
+  //trigger when the Done button is clicked and remove all tweets from modal box
+  twitterObject.modalDone($('input.modal-done'));
 });
