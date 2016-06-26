@@ -19,6 +19,8 @@ if( !class_exists( 'TwitterPostsPicker' ) )
       //for acf version 4
       add_action('acf/register_fields', [$this, 'include_field_types' ]);
 
+
+
 		}
 
 		public function include_field_types($version)
