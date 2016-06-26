@@ -14,6 +14,5 @@ if( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-require_once 'TwitterAPI.php';
-
+require_once 'classes/TwitterAPI.php';
 require_once 'classes/TwitterPostsPicker.php';

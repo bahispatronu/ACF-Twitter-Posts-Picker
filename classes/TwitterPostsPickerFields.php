@@ -4,8 +4,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-
-
 if ( ! class_exists( 'TwitterPostsPickerFields' ) ) {
 
 	class TwitterPostsPickerFields extends acf_field {
@@ -41,12 +39,12 @@ if ( ! class_exists( 'TwitterPostsPickerFields' ) ) {
       parent::__construct();
       $this->settings = $settings;
 
-			add_action( 'wp_ajax_nopriv_getTweets', array($this, 'getTweets') );
-			add_action( 'wp_ajax_getTweets', array($this, 'getTweets') );
+			add_action( 'wp_ajax_nopriv_getTweets', array($this, 'ajax_callback') );
+			add_action( 'wp_ajax_getTweets', array($this, 'ajax_callback') );
 
     }
 
-		public function getTweets(){
+		public function ajax_callback(){
 			if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) {
 				if(!empty($_POST)) {
 					$keyword = $_POST['keyword'];
@@ -62,7 +60,12 @@ if ( ! class_exists( 'TwitterPostsPickerFields' ) ) {
 						$accessToken,
 						$accessSecret
 					);
-					$posts = $twitter->getPosts($keyword);
+					$parameters = array(
+						"q" => urlencode($keyword),
+						'lang' => 'en',
+						'result_type' >= 'recent',
+					);
+					$posts = $twitter->getTweets($parameters);
 					$html = '';
 					foreach ($posts->statuses as $users) {
 						$html .= '<div class="profile" data-unique="'.uniqid().'" data-img="'.$users->user->profile_image_url.'"
