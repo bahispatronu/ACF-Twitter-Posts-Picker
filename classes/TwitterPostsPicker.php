@@ -52,6 +52,8 @@ if( !class_exists( 'TwitterPostsPicker' ) )
 				$version = 4;
 			}
       $this->settings['acf_version'] = absint( $version );
+
+			//include all fields and settings
 			require_once 'TwitterPostsPickerFields.php';
 		}
 	}
