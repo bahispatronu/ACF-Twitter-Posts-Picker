@@ -8,13 +8,7 @@ twitterObject = {
   },
   removeSelect : function(obj) {
     twitterObject.removeAddedTweet();
-    obj.each(function(){
-      var current = jQuery(this);
-      if(current.hasClass('current')) {
-        current.removeClass('current');
-        console.log(current);
-      }
-    });
+    jQuery('.tweets-users.modal .profile').removeClass('current');
   },
   addSelect : function(current) {
     twitterObject.addNewTweet(current);
